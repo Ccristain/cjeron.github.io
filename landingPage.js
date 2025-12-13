@@ -20,7 +20,7 @@ for(const each of eachProject){
     const counter = 0;
     each.innerHTML = `
     <img src="#" alt="wait lang" class="project-photo">
-    <p class="project-title">Nigga<p>
+    <p class="project-title">Lorem Ipsum<p>
     <p class="project-caption">"Website project for posting sakuga."<p>
     `;
 }
