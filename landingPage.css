@@ -139,10 +139,12 @@ main{
     height: 60%;
     background-color: burlywood;
     display: block;
+    object-fit: cover;
 }
 
 .project-title{
     font-weight: 900;
+    margin: 0.5rem 0 0.2rem 0.2rem;
 }
 
 .project-caption{
