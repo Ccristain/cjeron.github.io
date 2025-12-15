@@ -7,6 +7,7 @@
 :root{
     --light-color: azure;
     --dark-color: darkgray;
+    --dark-blue:rgb(7, 17, 51);
 }
 
 html{
@@ -32,9 +33,10 @@ body{
 header{
     width: 100%;
     display: flex;
-    justify-content: end;
-    padding: 1rem;
+    justify-content: start;
+    padding: 1rem 5rem;
     column-gap: 2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 header a{
@@ -43,9 +45,10 @@ header a{
 }
 
 #nav-btn{
-    width: 2rem;
-    height: 2rem;
-    display: none;
+    width: 3rem;
+    height: 3rem;
+    display: none;  
+    border-radius: 50%;
 }
 /*HEADER*/
 
@@ -60,18 +63,59 @@ main{
 #home{
     width: inherit;
     column-gap: 1rem;
+    height: auto;
 }
-
+h1{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+}
 #profile-picture{
     background-color: rgb(211, 158, 61);
-    width: 50%;
+    width: 100%;
+    min-width: 280px;
+    max-width: 500px;
+    height: auto;
     aspect-ratio: 9/9;
 }
 #profile-picture img{
     width: 100%;
     height: 100%;
 }
+#contact-field{
+    border-radius: 1rem;
+    border-color:   black;
+    background-color: var(--dark-blue);
+    display: flex;
+    text-align: center;
+}
+#contact-field legend{
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--light-color);
+    position: relative;
+    top: 1rem;
+    margin: 1rem;
+}
+#contact-field a{
+    text-decoration: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin: 1rem;
+    border: 1px solid var(--light-color);
+    padding: 0.5rem;
+    border-radius: 50%;
 
+    transition: all 300ms ease-in;
+}
+#contacts-icons{
+    width: 100%;
+    height: 100%;
+}
+#contact-field a:hover{
+    border-radius: 0.5rem;
+    background-color: white;
+    color: var(--dark-blue);
+}
 /*PROJECTS*/
 #projects{
     width: 100%;
@@ -136,7 +180,7 @@ main{
 
 .project-photo{
     width: 100%;
-    height: 60%;
+    height: 50%;
     background-color: burlywood;
     display: block;
     object-fit: cover;
@@ -155,6 +199,9 @@ main{
     html{
     font-size: 12px;
     }
+    main{
+    margin-top: 7vh;
+    }
     header{ 
     display: none;
     justify-content: start;
@@ -164,16 +211,23 @@ main{
     height: 100vh;
     z-index: 2;
     background-color: rgba(119, 119, 119, 0.1);
-    padding-top: 4rem;
+    padding-top: 10rem;
     position: fixed;
     backdrop-filter: blur(5px);
+    }
+
+    #button-bg{
+    position: fixed;
+    background-color: rgb(7, 17, 51);
+    width: 100vw;
+    height: 7vh;
+    z-index: 1;
     }
 
     #nav-btn{
     display: block;
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    margin: 1rem;
     z-index: 3;
     }
 
@@ -187,18 +241,22 @@ main{
 
     #profile-picture{
     background-color: rgb(211, 158, 61);
-    width: 80%;
+    width: 60%;
     aspect-ratio: 1/1;
     }   
 
-    #my-name{   
+    #introduction{   
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 80%;
     }
 
+    #contact-field{
+    width: 80%;
+    }
     /*PROJECTS*/
     #projects{
     width: 100%;
@@ -259,8 +317,22 @@ main{
     transform: scale(1.1);
     box-shadow: 0px 2px 5px black;
     }
-}
 
+    .divider{
+        display: block !important;
+        border: 3px var(--dark-blue) solid;
+        border-radius: 0.5rem;
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+@media (max-width: 450px){
+    #profile-picture{
+    background-color: rgb(211, 158, 61);
+    width: 80%;
+    aspect-ratio: 1/1;
+    }   
+}
 /*Utility Classes*/
 .flex-center{
     display: flex;
@@ -270,4 +342,11 @@ main{
 
 .wide-padding{
     padding: 5rem 5rem;
+}
+.justified{
+    text-align: justify;
+    margin-bottom: 1rem;
+}   
+.divider{
+    display: none;
 }
