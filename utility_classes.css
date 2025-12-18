@@ -1,0 +1,23 @@
+/*Utility Classes*/
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wide-padding{
+    padding: 2rem 1.5rem;
+}
+.justified{
+    text-align: justify;
+    margin-bottom: 1rem;
+}   
+.divider{
+    display: none;
+}
+.titles{
+    padding: 1rem;
+    border-radius: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+}
