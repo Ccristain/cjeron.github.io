@@ -85,6 +85,8 @@ h1{
     max-width: 500px;
     height: auto;
     aspect-ratio: 9/9;
+    border-radius: 50%;
+    overflow: hidden;
 }
 #profile-picture img{
     width: 100%;
@@ -339,7 +341,7 @@ h3.skill-title{
 .cover{
     width: 100%;
     height: 100%;
-    background-color: rgb(245, 245, 245, 0.8);
+    background-color: rgb(245, 245, 245, 0.5);
     backdrop-filter: blur(5px);
     position: absolute;
     top: 0; 
@@ -356,7 +358,7 @@ h3.skill-title{
 }
 
 .cover .cover-title{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 5px;
@@ -366,6 +368,7 @@ h3.skill-title{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
 }
+
 /*Mobile view*/
 @media (max-width: 750px){
     html{
