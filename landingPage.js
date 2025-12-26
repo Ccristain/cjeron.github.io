@@ -17,13 +17,13 @@ const projectContents = {
     Ournimation: {
         link: "assets/ournimation_pic.png",
         title: "Ournimation",
-        caption: "Website project for posting personal animation to help other animator to learn animation styles."
+        caption: "A website built using HTML, CSS, and JavaScript that teaches users how to create 2D animations through principles tutorials and other techniques. It also functions as a social media platform where users can share their work to motivate others and exchange skills and ideas."
     },TapSpeed: {
         link: "assets/tapspeed_pic.png",
         title: "TapSpeed",
-        caption: "HTML5 game where you tap as fast as you can to challenge your motor skills."
+        caption: "An HTML5 game about tapping as fast as you can, inspired by Friday Night Funkin’. It has three difficulty levels that change the speed and the score required to achieve. Each game lasts approximately one minute, making it easy to play even during busy moments."
     },Portfolio: {
-        link: "assets/portfolio.png",
+        link: "assets/portfolio_website_pic.png",
         title: "Personal Portfolio",
         caption: "My personal portfolio website made with HTML, CSS, and JavaScript to showcase my personal data, projects and skills."
     },
@@ -90,20 +90,20 @@ const coverText = {
         },
         "Web Development": {
             title: "Web Development",
-            description: "Skilled in HTML, CSS, and JavaScript for building responsive websites."
+            description: "Skilled in HTML, CSS, and JavaScript for building responsive websites that are scalable to other screen resolutions and improving Search Engine Optimization using meta tags and semantic HTML."
         },
         "Graphic Design": {
             title: "Graphic Design",
-            description: "Experienced in Canva for creating visual content."
+            description: "Experienced in Canva for creating visual content like presentation, posters/ads, and logos."
         },
         "2d Animation": {
             title: "2d Animation",
-            description: "Knowledgeable in Fundamentals for creating 2D animations."
+            description: "Knowledgeable in Fundamentals for creating 2D animations specifically effects animation and character animation. Familiar with animation software like FlipaClip."
         },
         "Network Configuration": {
             title: "Network Configuration",
             description: "Understanding of basic network setup and troubleshooting."
-        }
+        }   
     },
     softSkillsText: {
         "Problem Solving": {
@@ -112,11 +112,11 @@ const coverText = {
         },
         "Time Management": {
             title: "Time Management",
-            description: "Efficient in organizing tasks to meet deadlines."
+            description: "I am generally efficient in scheduling time for tasks and meeting deadlines."
         },
         "Adaptability": {
             title: "Adaptability",
-            description: "Flexible and open to change in dynamic environments."
+            description: "Flexible and open to change in dynamic environments while mentally at ease."
         },
         "Goal Centric": {
             title: "Goal Centric",
