@@ -321,7 +321,7 @@ h3.skill-title{
     padding: 0.5rem;
 
     color: silver;
-    flex: 1 1 auto;
+    flex: 1 0 auto;
 
     display: flex;
     justify-content: center;
@@ -358,6 +358,8 @@ h3.skill-title{
 .cover .cover-title{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 5px;
 }
 
 .cover .cover-description{
