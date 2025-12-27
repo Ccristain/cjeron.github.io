@@ -1,15 +1,20 @@
 const navBtn = document.getElementById("nav-btn");
 const header = document.getElementById("header");
-
+const navLinks = document.querySelectorAll("header a");
+const media = window.matchMedia("(min-width: 750px)");
 let isOn = false;
 
 navBtn.addEventListener("click", (e) => {
-    if(isOn === true){
+    let delayTime = 0;
+    if(isOn !== true){
         header.style.display = "flex";
-        isOn = false;
+        navLinks.forEach((link) => {    
+            link.style.animation = `navButtons 500ms ease-in ${delayTime += 100}ms forwards`;
+        });
+        isOn = true;
     }else{
         header.style.display = "none";
-        isOn = true;
+        isOn = false;
     }
 });
 
@@ -34,9 +39,10 @@ for(const each of eachProject){
     let titleCount = Array.from(eachProject).indexOf(each) + 1;
     each.innerHTML = `
     <img src="${loadProjectLink(titleCount)}" alt="wait lang" class="project-photo">
+    <div id="each-project-container">
     <p class="project-title">${loadProjectTitle(titleCount)}<p>
     <p class="project-caption">"${loadProjectCaption(titleCount)}"<p>
-    `;
+    </div>`;
 }
 
 function loadProjectLink(param){
