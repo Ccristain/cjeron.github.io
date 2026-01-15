@@ -1,97 +1,7 @@
-const navBtn = document.getElementById("nav-btn");
-const header = document.getElementById("header");
-const navLinks = document.querySelectorAll("header a");
-const media = window.matchMedia("(min-width: 750px)");
-let isOn = false;
-
-navBtn.addEventListener("click", (e) => {
-  let delayTime = 0;
-  if (isOn !== true) {
-    header.style.display = "flex";
-    navLinks.forEach((link) => {
-      link.style.animation = `navButtons 500ms ease-in ${(delayTime += 100)}ms forwards`;
-    });
-    isOn = true;
-  } else {
-    header.style.display = "none";
-    isOn = false;
-  }
-});
-
-const projectContents = {
-  Ournimation: {
-    link: "assets/ournimation_pic.png",
-    title: "Ournimation",
-    caption:
-      "A website built using HTML, CSS, and JavaScript that teaches users how to create 2D animations through principles tutorials and other techniques. It also functions as a social media platform where users can share their work to motivate others and exchange skills and ideas.",
-  },
-  TapSpeed: {
-    link: "assets/tapspeed_pic.png",
-    title: "TapSpeed",
-    caption:
-      "An HTML5 game about tapping as fast as you can, inspired by Friday Night Funkin’. It has three difficulty levels that change the speed and the score required to achieve. Each game lasts approximately one minute, making it easy to play even during busy moments.",
-  },
-  Portfolio: {
-    link: "assets/portfolio_website_pic.png",
-    title: "Personal Portfolio",
-    caption:
-      "My personal portfolio website made with HTML, CSS, and JavaScript to showcase my personal data, projects and skills.",
-  },
-};
-const eachProject = document.querySelectorAll(".each-project");
-
-for (const each of eachProject) {
-  let titleCount = Array.from(eachProject).indexOf(each) + 1;
-  each.innerHTML = `
-    <img src="${loadProjectLink(
-      titleCount
-    )}" alt="wait lang" class="project-photo">
-    <div id="each-project-container">
-    <p class="project-title">${loadProjectTitle(titleCount)}</p>
-    <p class="project-caption">"${loadProjectCaption(titleCount)}"</p>
-    </div>`;
-}
-
-function loadProjectLink(param) {
-  switch (param) {
-    case 1:
-      return projectContents.Ournimation.link;
-      break;
-    case 2:
-      return projectContents.TapSpeed.link;
-      break;
-    case 3:
-      return projectContents.Portfolio.link;
-      break;
-  }
-}
-
-function loadProjectTitle(param) {
-  switch (param) {
-    case 1:
-      return projectContents.Ournimation.title;
-      break;
-    case 2:
-      return projectContents.TapSpeed.title;
-      break;
-    case 3:
-      return projectContents.Portfolio.title;
-      break;
-  }
-}
-
-function loadProjectCaption(param) {
-  switch (param) {
-    case 1:
-      return projectContents.Ournimation.caption;
-      break;
-    case 2:
-      return projectContents.TapSpeed.caption;
-      break;
-    case 3:
-      return projectContents.Portfolio.caption;
-      break;
-  }
+/* CONTACT */
+function toShow() {
+  const popup = document.getElementById("contact-pop-up");
+  popup.classList.toggle("show");
 }
 
 /* SKILL ANIMATION */
@@ -162,7 +72,7 @@ let softDescription = document.getElementById("soft-description");
 hardSkills.forEach((skill) => {
   skill.addEventListener("mouseover", () => {
     softSkillsCover.style.opacity = "100%";
-    softSkillsCover.style.zIndex = "1";
+    softSkillsCover.style.zIndex = "3";
     softTitle.innerText = coverText.hardSkillsText[skill.innerText].title;
     softDescription.innerText =
       coverText.hardSkillsText[skill.innerText].description;

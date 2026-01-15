@@ -46,3 +46,19 @@
   z-index: 1;
   opacity: 0.5;
 }
+
+.show {
+  visibility: visible !important;
+  animation: fadeIn 300ms ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 75px;
+    right: 0;
+  }
+}
