@@ -3,7 +3,15 @@ function toShow() {
   const popup = document.getElementById("contact-pop-up");
   popup.classList.toggle("show");
 }
-
+//https://ccristain.github.io/tapspeed.github.io/
+/*PROJECT VISIT*/
+const projectVisitDiv = document.querySelectorAll(".visit-project-nav");
+projectVisitDiv.forEach((div) => {
+  div.addEventListener("click", () => {
+    window.open("https://ccristain.github.io/tapspeed.github.io/", "_blank");
+  });
+});
+console.log(projectVisitDiv);
 /* SKILL ANIMATION */
 const coverText = {
   hardSkillsText: {

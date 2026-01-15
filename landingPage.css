@@ -10,6 +10,7 @@
   --dark-color: darkgray;
   --dark-blue: rgb(7, 17, 51);
   --float-blue: rgb(9, 23, 68);
+  --whitesmoke-color: whitesmoke;
 }
 
 html {
@@ -181,8 +182,6 @@ body {
   transition: all 200ms ease-in;
 }
 
-.contact-lists i:hover {
-}
 /*CONTACT*/
 
 /*MAIN*/
@@ -281,11 +280,21 @@ h1 {
   flex-wrap: nowrap;
   padding: 1rem 1rem 3rem 1rem;
 }
+#project-container::-webkit-scrollbar {
+  border-radius: 1rem;
+  width: 100%;
+  background-color: var(--whitesmoke-color);
+}
+#project-container::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+  border: 5px solid var(--whitesmoke-color);
+}
 
 .each-project {
   width: 300px;
   height: 400px;
-  background-color: whitesmoke;
+  background-color: var(--whitesmoke-color);
   border-radius: 2rem;
 
   padding: 1rem;
@@ -316,6 +325,38 @@ h1 {
   z-index: 2;
 }
 
+.visit-project-nav {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+
+  background-color: orange;
+
+  z-index: 3;
+  visibility: hidden;
+
+  transition: all 300ms ease-in-out;
+  transform-origin: bottom;
+}
+.each-project:hover .visit-project-nav {
+  content: "VISIT PROJECT";
+  visibility: visible;
+  height: 2rem;
+}
+.visit-project-nav:hover {
+  font-size: 1rem;
+  color: rgb(236, 236, 236);
+}
+
 .each-project * {
   z-index: 3;
 }
@@ -323,6 +364,11 @@ h1 {
 .each-project:hover {
   transform: translateY(-1rem);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.each-project::before:hover {
+  background-color: orangered;
+  cursor: pointer;
 }
 
 .project-title {
