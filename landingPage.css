@@ -383,7 +383,8 @@ h1 {
 }
 .project-description {
   width: 100%;
-  height: auto;
+  height: 20%;
+  overflow-y: hidden;
 }
 .project-tools {
   width: 100%;
@@ -403,8 +404,10 @@ h1 {
   justify-self: center;
 }
 .tools {
+  width: 100%;
   font-size: 2rem;
   color: orangered;
+  border-radius: 0.5rem;
 }
 .project-video {
   width: 100%;

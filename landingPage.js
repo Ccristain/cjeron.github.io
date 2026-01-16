@@ -5,10 +5,16 @@ function toShow() {
 }
 //https://ccristain.github.io/tapspeed.github.io/
 /*PROJECT VISIT*/
+const linkArray = [
+  "https://ccristain.github.io/tapspeed.github.io/",
+  "https://rahaevents.my.canva.site/",
+];
+
 const projectVisitDiv = document.querySelectorAll(".visit-project-nav");
-projectVisitDiv.forEach((div) => {
+
+projectVisitDiv.forEach((div, index) => {
   div.addEventListener("click", () => {
-    window.open("https://ccristain.github.io/tapspeed.github.io/", "_blank");
+    window.open(linkArray[index], "_blank");
   });
 });
 console.log(projectVisitDiv);
